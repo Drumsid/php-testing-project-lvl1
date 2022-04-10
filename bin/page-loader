@@ -1,0 +1,37 @@
+#!/usr/bin/env php
+<?php
+
+$autoloadPath1 = __DIR__ . '/../../../autoload.php';
+$autoloadPath2 = __DIR__ . '/../vendor/autoload.php';
+if (file_exists($autoloadPath1)) {
+    require_once $autoloadPath1;
+} else {
+    require_once $autoloadPath2;
+}
+
+$doc = <<<DOC
+Generate page-loader
+Usage:
+  page-loader (-h|--help)
+  page-loader (-v|--version)
+  page-loader [--format <fmt>] <url> <directory>
+Options:
+  -h --help                     Show this screen
+  -v --version                  Show version
+  --format <fmt>                Report format [default: stylish]
+DOC;
+
+
+
+function test(string $filePathBefore, string $filePathAfter,)
+{
+    return [$filePathBefore, $filePathAfter];
+}
+
+$args = Docopt::handle($doc);
+
+try {
+    print_r(test($args->args["<url>"], $args->args["<directory>"]));
+} catch (\Exception $e) {
+  exit("Error: {$e->getMessage()}\n");
+}
