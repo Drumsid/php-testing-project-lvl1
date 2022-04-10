@@ -13,5 +13,7 @@
             "email": "denis.soloduhin@simbirsoft.com"
         }
     ],
-    "require": {}
+    "require": {
+        "docopt/docopt": "^1.0"
+    }
 }
