@@ -1,0 +1,17 @@
+{
+    "name": "hexlet/code",
+    "description": "page loader",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Hexlet\\Code\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "denis.soloduhin",
+            "email": "denis.soloduhin@simbirsoft.com"
+        }
+    ],
+    "require": {}
+}
