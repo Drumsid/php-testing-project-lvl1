@@ -5,7 +5,11 @@
     "autoload": {
         "psr-4": {
             "Hexlet\\Code\\": "src/"
-        }
+        },
+        "files": [
+            "src/loader.php",
+            "src/formatUrl.php"
+        ]
     },
     "authors": [
         {
@@ -14,6 +18,10 @@
         }
     ],
     "require": {
-        "docopt/docopt": "^1.0"
-    }
+        "docopt/docopt": "^1.0",
+        "guzzlehttp/guzzle": "^7.4"
+    },
+    "bin": [
+        "bin/page-loader"
+    ]
 }

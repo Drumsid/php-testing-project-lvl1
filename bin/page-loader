@@ -1,6 +1,8 @@
 #!/usr/bin/env php
 <?php
 
+use function Loader\Loader\loadPage;
+
 $autoloadPath1 = __DIR__ . '/../../../autoload.php';
 $autoloadPath2 = __DIR__ . '/../vendor/autoload.php';
 if (file_exists($autoloadPath1)) {
@@ -21,17 +23,11 @@ Options:
   --format <fmt>                Report format [default: stylish]
 DOC;
 
-
-
-function test(string $filePathBefore, string $filePathAfter,)
-{
-    return [$filePathBefore, $filePathAfter];
-}
-
+$client = new \GuzzleHttp\Client();
 $args = Docopt::handle($doc);
 
 try {
-    print_r(test($args->args["<url>"], $args->args["<directory>"]));
+    print_r(loadPage($args->args["<url>"], $args->args["<directory>"], $client));
 } catch (\Exception $e) {
   exit("Error: {$e->getMessage()}\n");
 }
