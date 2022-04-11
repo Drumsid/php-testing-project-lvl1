@@ -1,6 +1,6 @@
 <?php
 
-namespace Loader\Formater;
+namespace Loader\Formatter;
 
 function formatUrlToFileName($url)
 {

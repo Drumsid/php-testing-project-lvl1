@@ -7,8 +7,8 @@
             "Hexlet\\Code\\": "src/"
         },
         "files": [
-            "src/loader.php",
-            "src/formatUrl.php"
+            "src/Loader/loader.php",
+            "src/Formatter/formatUrl.php"
         ]
     },
     "authors": [
