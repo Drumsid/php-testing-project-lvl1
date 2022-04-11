@@ -23,5 +23,12 @@
     },
     "bin": [
         "bin/page-loader"
-    ]
+    ],
+    "scripts": {
+        "phpcs": "phpcs",
+        "phpunit": "phpunit tests"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    }
 }
