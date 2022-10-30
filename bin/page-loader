@@ -31,3 +31,6 @@ try {
 } catch (\Exception $e) {
   exit("Error: {$e->getMessage()}\n");
 }
+
+//пример запроса
+// php bin/page-loader https://ru.hexlet.io/courses test2
