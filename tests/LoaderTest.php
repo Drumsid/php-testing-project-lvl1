@@ -20,16 +20,16 @@ class LoaderTest extends TestCase
     function testCorrectLoader() : void
     {
         $stub = $this->createMock(Client::class);
-        $this->assertEquals("Link no valid!", loadPage("https://fakeLink", "/test", $stub));
+        $this->assertEquals("Link no valid!", loadPage("https://fakeLink", "test", $stub));
     }
 
-    function testInCorrectLoader() : void
+    function testCorrectLoader2() : void
     {
         $url = "https://ru.hexlet.io/courses";
-        $path = "/test";
+        $path = "test";
 
         $this->assertEquals(
-            "Saved in {$path}/ru-hexlet-io-courses.html\n",
+            "Saved in /result/{$path}/ru-hexlet-io-courses.html\n",
             loadPage($url, $path, $this->client));
     }
 }
